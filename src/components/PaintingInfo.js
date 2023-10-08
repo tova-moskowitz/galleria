@@ -1,14 +1,29 @@
 import React from "react";
-// import data from "../data/data.json";
+import data from "../data/data.json";
 
-function PaintingInfo() {
-  //   return (
-  //     <div className="painting-info">
-  //       {data.map((painting) => {
-  //         return painting.name;
-  //       })}
-  //     </div>
-  //   );
+function PaintingInfo({ columnOne, columnTwo, columnThree, columnFour }) {
+  const paintingOrder = [columnOne, columnTwo, columnThree, columnFour];
+
+  return paintingOrder.map((column) => {
+    return (
+      <div className="column">
+        {column.map((painting, index) => {
+          return (
+            <div key={index} className="image-item">
+              <img
+                src={data[painting].images.thumbnail}
+                alt={data[painting].name}
+              />
+              <div className="painting-info">
+                <p className="painting-name">{data[painting].name}</p>
+                <p className="artist-name">{data[painting].artist.name}</p>
+              </div>
+            </div>
+          );
+        })}
+      </div>
+    );
+  });
 }
 
 export default PaintingInfo;
