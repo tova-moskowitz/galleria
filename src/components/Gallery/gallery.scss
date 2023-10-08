@@ -1,0 +1,22 @@
+.wrapper {
+    width: 70%;
+    margin: auto;
+}
+
+.image-grid {
+    margin-top: 90px;
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.column {
+    flex: 0 0 calc(25% - 20px);
+}
+
+.image-item img {
+    margin-bottom: 20px;
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
