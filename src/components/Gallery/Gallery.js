@@ -1,20 +1,29 @@
-import React, { useState, useEffect, useRef } from "react";
-import data from "../../data/data.json";
+import React from "react";
 import "./gallery.scss";
+import data from "../../data/data.json";
 
 function Gallery({ columnOne, columnTwo, columnThree, columnFour }) {
-  const columns = [columnOne, columnTwo, columnThree, columnFour];
+  const paintingOrder = [columnOne, columnTwo, columnThree, columnFour];
 
   return (
     <div className="image-grid">
-      {columns.map((column) => {
+      {paintingOrder.map((column) => {
         return (
           <div className="column">
-            {column.map((painting, index) => (
-              <div key={index} className="image-item">
-                <img src={`/assets/${painting}/thumbnail.jpg`} alt={painting} />
-              </div>
-            ))}
+            {column.map((painting, index) => {
+              return (
+                <div key={index} className="image-item">
+                  <img
+                    src={data[painting].images.thumbnail}
+                    alt={data[painting].name}
+                  />
+                  <div className="painting-info">
+                    <p className="painting-name">{data[painting].name}</p>
+                    <p className="artist-name">{data[painting].artist.name}</p>
+                  </div>
+                </div>
+              );
+            })}
           </div>
         );
       })}
@@ -22,20 +31,3 @@ function Gallery({ columnOne, columnTwo, columnThree, columnFour }) {
   );
 }
 export default Gallery;
-
-//   return (
-//     <ul className="gallery">
-//       {data.map((painting, ind) => {
-//         return (
-//           <li>
-//             <img
-//               className={`gallery-painting painting-${ind + 1}`}
-//               src={painting.images.thumbnail}
-//               alt={painting.name}
-//             />
-//           </li>
-//         );
-//       })}
-//     </ul>
-//   );
-// }

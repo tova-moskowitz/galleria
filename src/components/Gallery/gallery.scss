@@ -1,22 +1,58 @@
+@font-face {
+    font-family: "Libre Baskerville";
+    /* serif */
+    src: local("Lora"),
+        url("../../../public/assets/Libre_Baskerville/LibreBaskerville-Bold.ttf") format("truetype");
+}
+
 .wrapper {
     width: 70%;
     margin: auto;
-}
+    position: relative;
 
-.image-grid {
-    margin-top: 90px;
-    display: flex;
-    justify-content: space-between;
-    gap: 20px;
-}
+    .image-grid {
+        margin-top: 90px;
+        display: flex;
+        justify-content: space-between;
+        gap: 20px;
+        position: absolute;
 
-.column {
-    flex: 0 0 calc(25% - 20px);
-}
+        .column {
+            flex: 0 0 calc(25% - 20px);
 
-.image-item img {
-    margin-bottom: 20px;
-    max-width: 100%;
-    height: auto;
-    display: block;
+            .image-item {
+                text-align: left;
+
+                .painting-info {
+                    padding-left: 15px;
+                    color: #ffff;
+                    font-weight: 400;
+                    position: relative;
+                    z-index: 1;
+                    height: 0px;
+                    bottom: 6em;
+                    font-family: "Libre_Baskerville";
+
+                    .painting-name {
+                        font-weight: 700;
+                        font-size: 1.3em;
+                        margin-bottom: 0;
+                    }
+
+                    .artist-name {
+                        font-weight: 100;
+                        font-size: .8em;
+                        margin-top: 0;
+                    }
+                }
+
+                img {
+                    max-width: 100%;
+                    height: auto;
+                    display: block;
+                    position: relative;
+                }
+            }
+        }
+    }
 }

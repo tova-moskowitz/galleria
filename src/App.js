@@ -1,27 +1,15 @@
 import React from "react";
 import "./App.scss";
 import Gallery from "./components/Gallery/Gallery.js";
+import data from "./data/data.json";
 
 function App() {
-  const columnOne = [
-    "starry-night",
-    "the-storm-on-the-sea-of-galilee",
-    "lady-with-an-ermine",
-    "the-boy-in-the-red-vest",
-  ];
-  const columnTwo = [
-    "girl-with-pearl-earring",
-    "the-great-wave-off-kanagawa",
-    "the-night-cafe",
-    "arnolfini-portrait",
-  ];
-  const columnThree = ["guernica", "van-gogh-self-portrait", "mona-lisa"];
-  const columnFour = [
-    "penitent-magdalene",
-    "the-sleeping-gypsy",
-    "the-basket-of-apples",
-    "the-swing",
-  ];
+  console.log(data);
+  const columnOne = [0, 4, 8, 11];
+  const columnTwo = [1, 5, 9, 12];
+  const columnThree = [2, 6, 13];
+  const columnFour = [3, 7, 10, 14];
+
   // Add more image names in the desired order
 
   return (
