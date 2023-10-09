@@ -1,8 +1,10 @@
 @font-face {
     font-family: "Libre Baskerville";
-    src: local("Libre_Baskerville"),
+    /* serif */
+    src: local("Lora"),
         url("../../../public/assets/Libre_Baskerville/LibreBaskerville-Bold.ttf") format("truetype");
 }
+
 
 .image-grid {
     margin-top: 90px;
@@ -14,24 +16,15 @@
     .column {
         flex: 0 0 calc(25% - 20px);
 
-        .image-item {
-            :before {
-                content: "";
-                position: absolute;
-                top: -20px;
-                left: 0;
-                width: 100%;
-                height: 100%;
-                background: linear-gradient(to top, rgba(0, 0, 0, 0.55), transparent);
-                pointer-events: none;
-            }
 
+
+        .image-item {
             text-align: left;
             position: relative;
 
             .painting-info {
                 font-family: "Libre Baskerville";
-                padding-left: 25px;
+                padding-left: 15px;
                 color: #ffff;
                 font-weight: 400;
                 position: relative;
@@ -41,7 +34,7 @@
 
                 .painting-name {
                     font-weight: 700;
-                    font-size: 1.2em;
+                    font-size: 1.3em;
                     margin-bottom: 0;
                 }
 
@@ -60,4 +53,16 @@
             }
         }
     }
+}
+
+.image-item::before {
+    content: "";
+    position: absolute;
+    z-index: 1;
+    top: -20px;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to top, rgba(15, 15, 15, 0.5), rgba(128, 128, 128, 0));
+    pointer-events: none;
 }
