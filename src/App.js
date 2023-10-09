@@ -1,10 +1,9 @@
 import React from "react";
 import "./App.scss";
 import Gallery from "./components/Gallery/Gallery.js";
-import data from "./data/data.json";
+import Header from "./components/Header.js";
 
 function App() {
-  console.log(data);
   const columnOne = [0, 4, 8, 11];
   const columnTwo = [1, 5, 9, 12];
   const columnThree = [2, 6, 13];
@@ -14,6 +13,7 @@ function App() {
 
   return (
     <div className="wrapper">
+      <Header />
       <Gallery
         columnOne={columnOne}
         columnTwo={columnTwo}
