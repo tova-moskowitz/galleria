@@ -18,6 +18,11 @@
             position: relative;
             margin-bottom: 7px;
 
+            &:hover {
+                cursor: pointer;
+            }
+
+
             img {
                 max-width: 100%;
                 height: auto;
@@ -27,25 +32,23 @@
 
             .painting-info {
                 font-family: "Libre Baskerville";
-                padding-left: 25px;
+                padding-left: 32px;
                 color: #ffff;
                 position: relative;
                 z-index: 1;
                 height: 0px;
-                bottom: 6.5em;
+                bottom: 7em;
                 max-width: 75%;
-
-
 
                 .painting-name {
                     font-weight: 700;
                     font-size: 1.25em;
+                    margin-bottom: 3px;
                 }
 
                 .artist-name {
                     font-weight: 400;
                     font-size: .6em;
-                    margin-top: 6px;
                 }
             }
         }
