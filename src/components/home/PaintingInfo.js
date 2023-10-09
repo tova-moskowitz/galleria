@@ -1,12 +1,12 @@
 import React from "react";
-import data from "../data/data.json";
+import data from "../../data/data.json";
 
 function PaintingInfo({ columnOne, columnTwo, columnThree, columnFour }) {
   const paintingOrder = [columnOne, columnTwo, columnThree, columnFour];
 
-  return paintingOrder.map((column) => {
+  return paintingOrder.map((column, index) => {
     return (
-      <div className="column">
+      <div key={index} className="column">
         {column.map((painting, index) => {
           return (
             <div key={index} className="image-item">

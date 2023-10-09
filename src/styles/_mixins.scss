@@ -1,0 +1,47 @@
+@font-face {
+    font-family: "Libre Baskerville";
+    src: local("Libre_Baskerville"),
+        url("../../public/assets/Libre_Baskerville/LibreBaskerville-Bold.ttf") format("truetype");
+}
+
+/* Fonts */
+$font: 'Libre Baskerville',
+serif;
+
+
+/* Typography */
+
+@mixin body {
+    font-size: 14px;
+    line-height: 28px;
+}
+
+@mixin display {
+    font-size: 200px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 150px;
+}
+
+@mixin heading1 {
+    font-weight: 700;
+    font-size: 56px;
+    line-height: 64px;
+}
+
+@mixin heading2 {
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 29px;
+}
+
+@mixin heading3 {
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 22px;
+}
+
+/* Colors */
+$light-gray: #F3f3f3;
+$medium-gray: #E5E5E5;
+$dark-gray: #7d7d7d;
