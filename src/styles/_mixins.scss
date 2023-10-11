@@ -47,7 +47,20 @@ serif;
     line-height: 19px;
 }
 
+@mixin subhead2 {
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 17px;
+}
+
 /* Colors */
 $light-gray: #F3F3F3;
 $medium-gray: #E5E5E5;
 $dark-gray: #7D7D7D;
+
+@mixin hr {
+    min-width: 1360px;
+    border: none;
+    height: 1px;
+    background-color: #e5e5e5;
+}
