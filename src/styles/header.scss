@@ -1,13 +1,12 @@
+@import '../styles/mixins';
+
+
 .galleria-header {
     img {
-        margin: 25px 0 20px 0;
+        // margin-top: 0px;
     }
 
     hr {
-        width: 1360px;
-        border: none;
-        height: 1px;
-        background-color: #e5e5e5;
-        margin-bottom: 40px;
+        @include hr;
     }
 }
