@@ -14,18 +14,25 @@ function gallerySingle({ pageNumber }) {
           <img src={"/assets/shared/icon-view-image.svg"} />
           VIEW IMAGE
         </button>
-        <div className="main-image">
-          <img
-            className="painting-image"
-            src={data[pageNumber].images.hero.large}
-            alt={data[pageNumber].name}
-          />
+        <div className="images">
+          <div className="painting-image">
+            <img
+              src={data[pageNumber].images.hero.large}
+              alt={data[pageNumber].name}
+            />
+          </div>
         </div>
+
         <div className="title-and-artist-box">
           <div className="painting-title">{data[pageNumber].name}</div>
           <div className="artist-name">{data[pageNumber].artist.name}</div>
+          <div className="artist-image">
+            <img
+              src={data[pageNumber].artist.image}
+              alt={data[pageNumber].artist.name}
+            />
+          </div>
         </div>
-        <img className="artist-image" src={data[pageNumber].artist.image} />
       </div>
 
       <div className="date-and-description-box">
