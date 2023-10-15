@@ -1,7 +1,7 @@
 @import './_mixins';
 
 .wrapper {
-    margin: 30px;
+    // margin: 30px;
 }
 
 .main-content {
@@ -9,13 +9,12 @@
     flex-direction: row;
     flex-wrap: nowrap;
     width: 100%;
-    // height: 624px;
 
     .modal-open {
         position: absolute;
         bottom: 14px;
         left: 16px;
-        // width: 13%;
+        width: 150px;
         color: #FFF;
         text-align: right;
         font-size: 10px;
@@ -69,20 +68,23 @@
             @include subhead1;
             color: $dark-gray;
         }
+
+        .artist-image {
+            position: absolute;
+            width: 128px;
+            top: 432px;
+            left: 115px;
+        }
     }
 
-    .artist-image {
-        position: absolute;
-        bottom: 5px;
-        left: 510px;
-        width: 128px;
-    }
+
 }
 
 .date-and-description-box {
     position: absolute;
-    right: 0;
+    right: 80px;
     top: 62px;
+    z-index: 1;
 
     .date {
         position: relative;
@@ -90,13 +92,11 @@
         color: $light-gray;
         right: -165px;
         top: -30px;
-        z-index: 1;
     }
 
     .description {
         position: relative;
         right: -165px;
-        z-index: 1;
         top: -115px;
         @include body;
         color: $dark-gray;
@@ -123,6 +123,8 @@
 
 }
 
+/* Tablet */
+
 @media (min-width: 768px) and (max-width: 1024px) {
     .wrapper {
         overflow: hidden;
@@ -144,13 +146,6 @@
                 top: 100%;
             }
         }
-
-        .images {
-            position: relative;
-            display: flex;
-            flex-direction: row;
-        }
-
     }
 
     .date-and-description-box {
@@ -169,5 +164,58 @@
             top: -100px;
         }
     }
+}
 
+/* Mobile */
+@media (max-width: 768px) {
+
+    .wrapper {
+        // overflow: hidden;
+        height: 100%;
+        max-width: 100%;
+
+
+
+
+        .main-content {
+            max-width: 768px;
+
+            .title-and-artist-box {
+                top: 300px;
+                width: 60%;
+                left: 0;
+                padding: 24px;
+
+                .painting-title {
+                    @include heading2;
+                    margin-bottom: 8px;
+                }
+            }
+        }
+
+        .date-and-description-box {
+            top: 445px;
+
+            .date {
+                font-size: 100px;
+                right: -104px;
+            }
+
+            .description {
+                @include body;
+                right: 0;
+                top: -70px;
+            }
+        }
+
+
+        .images {
+            .painting-image img {
+                max-width: 327px;
+                max-height: 280px;
+                object-fit: cover;
+            }
+        }
+
+    }
 }

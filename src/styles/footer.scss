@@ -4,6 +4,7 @@
 .galleria-footer {
     display: flex;
     width: 100%;
+    left: 40px;
     bottom: 0;
     position: fixed;
     z-index: 1;
@@ -18,12 +19,12 @@
         text-align: left;
 
         .painting-name {
-            @include heading3;
+            font-size: 18px;
             margin-bottom: 15px;
         }
 
         .artist-name {
-            @include subhead2;
+            font-size: 13px;
             opacity: 0.7528;
         }
     }
@@ -69,4 +70,35 @@
     }
 
 
+}
+
+@media (max-width: 768px) {
+    .painting-details {
+        .painting-name {
+            font-size: 13px;
+        }
+
+        .artist-name {
+            font-size: 10px;
+        }
+    }
+
+    .back-next-buttons {
+
+        .back-button,
+        .next-button {
+            img {
+                margin: 0;
+                width: 14px;
+            }
+        }
+
+        .back-button img {
+            margin-left: 80px;
+        }
+
+        .next-button img {
+            margin-left: 45px;
+        }
+    }
 }
