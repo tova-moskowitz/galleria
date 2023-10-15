@@ -1,0 +1,12 @@
+@import '../styles/mixins';
+
+
+.galleria-header {
+    img {
+        // margin-top: 0px;
+    }
+
+    hr {
+        @include hr;
+    }
+}

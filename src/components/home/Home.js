@@ -1,9 +1,8 @@
 import React from "react";
-import "./gallery.scss";
-import data from "../../data/data.json";
-import PaintingInfo from "../PaintingInfo";
+import "../../styles/home.scss";
+import PaintingInfo from "./PaintingInfo";
 
-function Gallery({ columnOne, columnTwo, columnThree, columnFour }) {
+function Home({ columnOne, columnTwo, columnThree, columnFour }) {
   return (
     <div className="image-grid">
       <PaintingInfo
@@ -15,4 +14,4 @@ function Gallery({ columnOne, columnTwo, columnThree, columnFour }) {
     </div>
   );
 }
-export default Gallery;
+export default Home;

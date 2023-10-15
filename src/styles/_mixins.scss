@@ -1,0 +1,72 @@
+@font-face {
+    font-family: "Libre Baskerville";
+    src: local("Libre_Baskerville"),
+        url("../../public/assets/Libre_Baskerville/LibreBaskerville-Bold.ttf") format("truetype");
+}
+
+/* Fonts */
+$font: 'Libre Baskerville',
+serif;
+
+
+/* Typography */
+
+@mixin body {
+    font-size: 14px;
+    line-height: 28px;
+}
+
+@mixin display {
+    font-size: 200px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 150px;
+}
+
+@mixin heading1 {
+    font-size: 56px;
+    font-weight: 700;
+    line-height: 64px;
+}
+
+@mixin heading2 {
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 29px;
+}
+
+@mixin heading3 {
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 22px;
+}
+
+@mixin subhead1 {
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 19px;
+}
+
+@mixin subhead2 {
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 17px;
+}
+
+/* Colors */
+$light-gray: #F3F3F3;
+$medium-gray: #E5E5E5;
+$dark-gray: #7D7D7D;
+
+@mixin hr {
+    min-width: 1360px;
+    border: none;
+    height: 1px;
+    background-color: #e5e5e5;
+}
+
+/* Breakpoints */
+
+@mixin tablet {
+    width: 768px;
+}

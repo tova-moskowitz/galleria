@@ -1,19 +1,18 @@
+@import './styles/_mixins';
+
 .wrapper {
-  width: 1200px;
+  font-family: $font;
+  max-width: 1200px;
   margin: auto;
   position: relative;
 
-  .galleria-header {
-
-    img {
-      margin: 40px 0;
-    }
-
-    hr {
-      border: none;
-      height: 1px;
-      background-color: #e5e5e5;
-    }
+  button {
+    font-family: $font;
   }
+}
+
+
+.footer {
+  bottom: 0;
 
 }

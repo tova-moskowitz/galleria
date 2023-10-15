@@ -1,0 +1,221 @@
+@import './_mixins';
+
+.wrapper {
+    // margin: 30px;
+}
+
+.main-content {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    width: 100%;
+
+    .modal-open {
+        position: absolute;
+        bottom: 14px;
+        left: 16px;
+        width: 150px;
+        color: #FFF;
+        text-align: right;
+        font-size: 10px;
+        font-weight: 700;
+        letter-spacing: 2.143px;
+        padding: 15px;
+        z-index: 1;
+        border: none;
+        opacity: 0.7546;
+        background: #000;
+        cursor: pointer;
+
+        &:hover {
+            background: rgba(255, 255, 255, 0.235);
+            color: #FFF
+        }
+
+        img {
+            position: relative;
+            top: 2px;
+            left: -10px;
+        }
+    }
+
+    .images {
+        .painting-image img {
+            width: 475px;
+            height: 560px;
+        }
+    }
+
+    .title-and-artist-box {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        left: 400px;
+        background: #ffff;
+        z-index: 1;
+        padding-bottom: 55px;
+        padding-left: 73px;
+        width: 345px;
+
+        .painting-title {
+            @include heading1;
+            width: 100%;
+            margin-bottom: 24px;
+
+        }
+
+        .artist-name {
+            @include subhead1;
+            color: $dark-gray;
+        }
+
+        .artist-image {
+            position: absolute;
+            width: 128px;
+            top: 432px;
+            left: 115px;
+        }
+    }
+
+
+}
+
+.date-and-description-box {
+    position: absolute;
+    right: 80px;
+    top: 62px;
+    z-index: 1;
+
+    .date {
+        position: relative;
+        font-size: 200px;
+        color: $light-gray;
+        right: -165px;
+        top: -30px;
+    }
+
+    .description {
+        position: relative;
+        right: -165px;
+        top: -115px;
+        @include body;
+        color: $dark-gray;
+        width: 350px;
+    }
+
+    .source {
+        position: relative;
+        right: -160px;
+        bottom: 64px;
+        color: #000;
+        font-family: Libre Baskerville;
+        font-size: 9px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+        letter-spacing: 1.929px;
+        text-decoration-line: underline;
+
+        &:hover {
+            color: $dark-gray;
+        }
+    }
+
+}
+
+/* Tablet */
+
+@media (min-width: 768px) and (max-width: 1024px) {
+    .wrapper {
+        overflow: hidden;
+        min-height: 1280px;
+    }
+
+    .main-content {
+        .modal-open {
+            bottom: 670px;
+
+        }
+
+        .title-and-artist-box {
+            left: 250px;
+
+            .artist-image {
+                position: absolute;
+                left: 265px;
+                top: 100%;
+            }
+        }
+    }
+
+    .date-and-description-box {
+        left: -170px;
+        top: auto;
+        margin-top: 30px;
+
+        .description {
+            left: 280px;
+            top: -150px;
+            width: 457px;
+        }
+
+        .source {
+            left: 275px;
+            top: -100px;
+        }
+    }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+
+    .wrapper {
+        // overflow: hidden;
+        height: 100%;
+        max-width: 100%;
+
+
+
+
+        .main-content {
+            max-width: 768px;
+
+            .title-and-artist-box {
+                top: 300px;
+                width: 60%;
+                left: 0;
+                padding: 24px;
+
+                .painting-title {
+                    @include heading2;
+                    margin-bottom: 8px;
+                }
+            }
+        }
+
+        .date-and-description-box {
+            top: 445px;
+
+            .date {
+                font-size: 100px;
+                right: -104px;
+            }
+
+            .description {
+                @include body;
+                right: 0;
+                top: -70px;
+            }
+        }
+
+
+        .images {
+            .painting-image img {
+                max-width: 327px;
+                max-height: 280px;
+                object-fit: cover;
+            }
+        }
+
+    }
+}
