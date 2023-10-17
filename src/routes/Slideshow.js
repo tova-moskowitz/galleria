@@ -1,23 +1,14 @@
 import React from "react";
 import data from "../data/data.json";
 import "../styles/gallery.scss";
-import Footer from "./Footer.js";
-import {
-  BrowserRouter as Router,
-  Routes,
-  Route,
-  useNavigate,
-  useParams,
-  Link,
-} from "react-router-dom";
-function Slideshow({ pageNumber, clickBack, clickNext }) {
+
+function Slideshow({ pageNumber }) {
   const clickOpenModal = (e) => {};
 
-  const { id } = useParams();
-  console.log(id);
+  console.log(pageNumber);
 
   return (
-    <div data-page-number={id} className="gallery-single-wrapper">
+    <div className="gallery-single-wrapper">
       <div className="main-content">
         <button onClick={clickOpenModal} className="modal-open">
           <img src={"/assets/shared/icon-view-image.svg"} />
@@ -51,11 +42,6 @@ function Slideshow({ pageNumber, clickBack, clickNext }) {
           GO TO SOURCE
         </a>
       </div>
-      <Footer
-        clickBack={clickBack}
-        clickNext={clickNext}
-        pageNumber={pageNumber}
-      />
     </div>
   );
 }
