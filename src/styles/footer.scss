@@ -4,7 +4,7 @@
 .galleria-footer {
     display: flex;
     width: 100%;
-    left: 40px;
+    left: 0;
     bottom: 0;
     position: fixed;
     z-index: 1;
@@ -63,11 +63,20 @@
         }
     }
 
-    hr {
-        @include hr;
-        margin-left: -30px;
-        min-width: 1440px;
+    .progress-bar {
+        border-top: #000 1px solid;
+
+        // hr {
+        //     max-width: 15px;
+        //     border-top: red 1px solid;
+        //     height: 1px;
+        //     background-color: #e5e5e5;
+        //     // margin-left: -30px;
+        //     min-width: 1440px;
+        // }
     }
+
+
 
 
 }

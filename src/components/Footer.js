@@ -4,11 +4,15 @@ import data from "../data/data.json";
 import { useParams, Link } from "react-router-dom";
 
 function Footer() {
+  const [progress, setProgress] = useState(0);
   const [disableBack, setDisableBack] = useState("");
   const [disableNext, setDisableNext] = useState("");
   const { paintingId } = useParams();
 
   const onClickBack = () => {
+    if (progress > 7) {
+      setProgress((progress) => progress - 7.15);
+    }
     if (+paintingId === 1) {
       setDisableBack("disabled");
     }
@@ -16,6 +20,9 @@ function Footer() {
   };
 
   const onClickNext = () => {
+    if (progress < 100) {
+      setProgress((progress) => progress + 7.15);
+    }
     if (+paintingId === data.length - 2) {
       setDisableNext("disabled");
     }
@@ -23,6 +30,7 @@ function Footer() {
   };
 
   useEffect(() => {
+    setProgress(+paintingId * 7.15);
     if (+paintingId === 0) {
       setDisableBack("disabled");
     }
@@ -34,7 +42,8 @@ function Footer() {
 
   return (
     <div className="galleria-footer">
-      <hr />
+      <div className="progress-bar" style={{ width: progress + "%" }}></div>
+
       <div className="painting-details">
         <div className="painting-name">{data[paintingId].name}</div>
         <div className="artist-name">{data[paintingId].artist.name}</div>
