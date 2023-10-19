@@ -9,39 +9,43 @@ function Slideshow() {
   const painting = data.find((painting) => painting.id === +paintingId);
 
   return (
-    <div className="gallery-single-wrapper">
-      <div className="main-content">
-        <button onClick={clickOpenModal} className="modal-open">
-          <img src={"/assets/shared/icon-view-image.svg"} />
-          VIEW IMAGE
-        </button>
-        <div className="images">
-          <div className="painting-image">
-            <img src={`../${painting.images.hero.large}`} alt={painting.name} />
+    <>
+      <div className="gallery-single-wrapper">
+        <div className="main-content">
+          <button onClick={clickOpenModal} className="modal-open">
+            <img src={"/assets/shared/icon-view-image.svg"} />
+            VIEW IMAGE
+          </button>
+          <div className="images">
+            <div className="painting-image">
+              <img
+                src={`../${painting.images.hero.large}`}
+                alt={painting.name}
+              />
+            </div>
+          </div>
+          <div className="title-and-artist-box">
+            <div className="painting-title">{painting.name}</div>
+            <div className="artist-name">{painting.artist.name}</div>
+            <div className="artist-image">
+              <img
+                src={`../${painting.artist.image}`}
+                alt={painting.artist.name}
+              />
+            </div>
           </div>
         </div>
 
-        <div className="title-and-artist-box">
-          <div className="painting-title">{painting.name}</div>
-          <div className="artist-name">{painting.artist.name}</div>
-          <div className="artist-image">
-            <img
-              src={`../${painting.artist.image}`}
-              alt={painting.artist.name}
-            />
-          </div>
+        <div className="date-and-description-box">
+          <div className="date">{painting.year}</div>
+          <div className="description">{painting.description}</div>
+          <a href={painting.source} className="source">
+            GO TO SOURCE
+          </a>
         </div>
-      </div>
-
-      <div className="date-and-description-box">
-        <div className="date">{painting.year}</div>
-        <div className="description">{painting.description}</div>
-        <a href={painting.source} className="source">
-          GO TO SOURCE
-        </a>
       </div>
       <Footer />
-    </div>
+    </>
   );
 }
 export default Slideshow;
