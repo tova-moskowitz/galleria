@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import "../styles/footer.scss";
 import data from "../data/data.json";
 import { useParams, Link } from "react-router-dom";
@@ -14,7 +14,7 @@ function Footer() {
         <div className="artist-name">{data[paintingId].artist.name}</div>
       </div>
       <div className="back-next-buttons">
-        <Link to={`/slideshow/${paintingId > 1 ? +paintingId - 1 : 1}`}>
+        <Link to={`/slideshow/${paintingId > 0 ? +paintingId - 1 : 0}`}>
           <button className="back-button">
             <img
               src="../assets/shared/icon-back-button.svg"
@@ -24,7 +24,7 @@ function Footer() {
         </Link>
         <Link
           to={`/slideshow/${
-            paintingId < data.length ? +paintingId + 1 : data.length
+            paintingId < data.length - 1 ? +paintingId + 1 : data.length - 1
           }`}
         >
           <button className="next-button">
