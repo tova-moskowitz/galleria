@@ -1,4 +1,4 @@
-import Reac, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "../styles/footer.scss";
 import data from "../data/data.json";
 import { useParams, Link } from "react-router-dom";
@@ -21,6 +21,16 @@ function Footer() {
     }
     setDisableBack("");
   };
+
+  useEffect(() => {
+    if (+paintingId === 0) {
+      setDisableBack("disabled");
+    }
+
+    if (+paintingId === data.length - 1) {
+      setDisableNext("disabled");
+    }
+  }, []);
 
   return (
     <div className="galleria-footer">
