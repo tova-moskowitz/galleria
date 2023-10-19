@@ -3,11 +3,11 @@ import data from "../data/data.json";
 import "../styles/gallery.scss";
 import Footer from "./Footer.js";
 import { useParams } from "react-router-dom";
-function Slideshow({ pageNumber, clickBack, clickNext }) {
+function Slideshow() {
   const clickOpenModal = (e) => {};
   const { paintingId } = useParams();
-
   const painting = data.find((painting) => painting.id === +paintingId);
+
   return (
     <div className="gallery-single-wrapper">
       <div className="main-content">
@@ -40,11 +40,7 @@ function Slideshow({ pageNumber, clickBack, clickNext }) {
           GO TO SOURCE
         </a>
       </div>
-      <Footer
-        clickBack={clickBack}
-        clickNext={clickNext}
-        pageNumber={pageNumber}
-      />
+      <Footer />
     </div>
   );
 }
