@@ -1,4 +1,4 @@
-import Reac, { useState, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import "../styles/footer.scss";
 import data from "../data/data.json";
 import { useParams, Link } from "react-router-dom";
