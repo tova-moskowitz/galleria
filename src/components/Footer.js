@@ -43,7 +43,7 @@ function Footer() {
   return (
     <div className="galleria-footer">
       <div className="progress-bar" style={{ width: progress + "%" }}></div>
-
+      <hr />
       <div className="painting-details">
         <div className="painting-name">{data[paintingId].name}</div>
         <div className="artist-name">{data[paintingId].artist.name}</div>
