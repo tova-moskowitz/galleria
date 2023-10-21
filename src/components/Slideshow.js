@@ -18,20 +18,14 @@ function Slideshow() {
           </button>
           <div className="images">
             <div className="painting-image">
-              <img
-                src="../assets/starry-night/gallery.jpg"
-                alt={painting.name}
-              />
+              <img src="/assets/shared/logo.svg" alt={painting.name} />
             </div>
           </div>
           <div className="title-and-artist-box">
             <div className="painting-title">{painting.name}</div>
             <div className="artist-name">{painting.artist.name}</div>
             <div className="artist-image">
-              <img
-                src={`.${painting.artist.image}`}
-                alt={painting.artist.name}
-              />
+              <img src="/assets/shared/logo.svg" alt={painting.artist.name} />
             </div>
           </div>
         </div>
