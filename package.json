@@ -1,6 +1,6 @@
 {
-  "homepage": "https://tova-moskowitz.github.io/galleria",
   "name": "galleria",
+  "homepage": ".",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
