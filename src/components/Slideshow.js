@@ -1,18 +1,27 @@
-import React from "react";
+import React, { useState } from "react";
 import data from "../data/data.json";
 import "../styles/gallery.scss";
 import Footer from "./Footer.js";
 import { useParams } from "react-router-dom";
+import Modal from "./Modal.js";
+
 function Slideshow() {
-  const clickOpenModal = (e) => {};
+  const [modalOpen, setModalOpen] = useState(false);
+
   const { paintingId } = useParams();
   const painting = data.find((painting) => painting.id === +paintingId);
 
   return (
     <>
       <div className="gallery-single-wrapper">
+        {modalOpen && <Modal painting={painting} setModalOpen={setModalOpen} />}
         <div className="main-content">
-          <button onClick={clickOpenModal} className="modal-open">
+          <button
+            onClick={() => {
+              setModalOpen(true);
+            }}
+            className="modal-open"
+          >
             <img src={"/assets/shared/icon-view-image.svg"} />
             VIEW IMAGE
           </button>
