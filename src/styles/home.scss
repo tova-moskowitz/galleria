@@ -10,19 +10,23 @@
     gap: 25px;
 
 
+    /* Mobile */
+
     @media (max-width: 415px) {
         grid-template-columns: 1fr;
         margin: 0 40px;
     }
 
+    /* Tablet */
     @media (min-width: 415px) and (max-width: 830px) {
         grid-template-columns: repeat(2, 1fr);
         margin: 0 40px;
     }
 
-    // @media (min-width: 830px) {
-    //     margin: 0 40px;
-    // }
+    /* Desktop */
+    @media (min-width: 1024px) {
+        margin: 0 40px;
+    }
 
     .column {
         flex: 0 0 calc(25% - 18px);

@@ -3,13 +3,23 @@
 
 .galleria-header {
     img {
-        // margin-top: 0px;
+        // margin-top: 20px;
     }
 
     hr {
         @include hr;
     }
 }
+
+/* Tablet */
+
+@media (min-width: 768px) and (max-width: 1330px) {
+    .galleria-header img {
+        padding-left: 40px;
+        padding-top: 15px;
+    }
+}
+
 
 /* Mobile */
 @media (max-width: 768px) {
