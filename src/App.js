@@ -26,7 +26,7 @@ function App() {
       <Header />
       <Routes>
         <Route
-          path="/galleria"
+          path="/"
           element={
             <Home
               columnOne={columnOne}
