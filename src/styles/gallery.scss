@@ -1,8 +1,4 @@
-@import './_mixins';
-
-.wrapper {
-    // margin: 30px;
-}
+@import "./_mixins";
 
 .main-content {
     display: flex;
@@ -15,7 +11,7 @@
         bottom: 14px;
         left: 16px;
         width: 150px;
-        color: #FFF;
+        color: #fff;
         text-align: right;
         font-size: 10px;
         font-weight: 700;
@@ -29,7 +25,7 @@
 
         &:hover {
             background: rgba(255, 255, 255, 0.235);
-            color: #FFF
+            color: #fff;
         }
 
         img {
@@ -61,7 +57,6 @@
             @include heading1;
             width: 100%;
             margin-bottom: 24px;
-
         }
 
         .artist-name {
@@ -76,8 +71,6 @@
             left: 115px;
         }
     }
-
-
 }
 
 .date-and-description-box {
@@ -120,7 +113,6 @@
             color: $dark-gray;
         }
     }
-
 }
 
 /* Tablet */
@@ -134,7 +126,6 @@
     .main-content {
         .modal-open {
             bottom: 670px;
-
         }
 
         .title-and-artist-box {
@@ -168,14 +159,10 @@
 
 /* Mobile */
 @media (max-width: 768px) {
-
     .wrapper {
-        // overflow: hidden;
-        height: 100%;
+        overflow: hidden;
+        height: 130vh;
         max-width: 100%;
-
-
-
 
         .main-content {
             max-width: 768px;
@@ -186,15 +173,33 @@
                 left: 0;
                 padding: 24px;
 
+                .artist-image {
+                    top: 125px;
+                    left: 25px;
+                    padding: 0;
+
+
+                    img {
+                        height: 64px;
+                    }
+                }
+
                 .painting-title {
                     @include heading2;
                     margin-bottom: 8px;
                 }
             }
+
+            .modal-open {
+                top: 90px;
+                left: 45px;
+                height: 40px;
+            }
         }
 
         .date-and-description-box {
-            top: 445px;
+            top: 485px;
+            left: 25px;
 
             .date {
                 font-size: 100px;
@@ -208,14 +213,13 @@
             }
         }
 
-
         .images {
             .painting-image img {
                 max-width: 327px;
                 max-height: 280px;
                 object-fit: cover;
+                padding-left: 36px;
             }
         }
-
     }
 }
