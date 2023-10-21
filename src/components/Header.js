@@ -4,7 +4,7 @@ import "../styles/header.scss";
 function Header() {
   return (
     <div className="galleria-header">
-      <img src="../assets/shared/logo.svg" />
+      <img src="./assets/shared/logo.svg" />
       <hr />
       {/* <div>Start Slideshow</div> */}
     </div>

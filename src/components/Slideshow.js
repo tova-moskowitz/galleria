@@ -27,20 +27,14 @@ function Slideshow() {
           </button>
           <div className="images">
             <div className="painting-image">
-              <img
-                src={`../${painting.images.hero.large}`}
-                alt={painting.name}
-              />
+              <img src={painting.images.hero.large} alt={painting.name} />
             </div>
           </div>
           <div className="title-and-artist-box">
             <div className="painting-title">{painting.name}</div>
             <div className="artist-name">{painting.artist.name}</div>
             <div className="artist-image">
-              <img
-                src={`../${painting.artist.image}`}
-                alt={painting.artist.name}
-              />
+              <img src={painting.artist.image} alt={painting.artist.name} />
             </div>
           </div>
         </div>
