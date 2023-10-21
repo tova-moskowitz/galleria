@@ -1,5 +1,6 @@
 @import "./_mixins";
 
+// @media (min-width: 1280px) {
 .main-content {
     display: flex;
     flex-direction: row;
@@ -76,7 +77,7 @@
 .date-and-description-box {
     position: absolute;
     right: 80px;
-    top: 62px;
+    top: 80px;
     z-index: 1;
 
     .date {
@@ -113,14 +114,20 @@
             color: $dark-gray;
         }
     }
+
+    // }
 }
 
 /* Tablet */
+@media (min-width: 740px) and (max-width: 1200px) {
 
-@media (min-width: 770px) {
     .wrapper {
         overflow: hidden;
         min-height: 1280px;
+
+        .gallery-wrapper {
+            // padding-left: 30px;
+        }
     }
 
     .main-content {
@@ -161,12 +168,23 @@
     }
 }
 
+
+/* Desktop */
+@media (min-width: 1201px) {
+    .wrapper {
+        padding: 0;
+    }
+}
+
 /* Mobile */
-@media (max-width: 768px) {
+@media (max-width: 740px) {
     .wrapper {
         overflow: hidden;
-        height: 160vh;
-        max-width: 100%;
+
+        .gallery-wrapper {
+            height: 160vh;
+        }
+
 
         .main-content {
             max-width: 768px;
@@ -220,7 +238,7 @@
         .images {
             .painting-image img {
                 max-width: 327px;
-                max-height: 280px;
+                height: 280px;
                 object-fit: cover;
                 padding-left: 1.75em;
             }

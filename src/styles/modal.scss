@@ -1,4 +1,4 @@
-@import './_mixins';
+@import "./_mixins";
 
 .modal {
     background: rgba(black, 0.85);
@@ -17,7 +17,6 @@
     }
 }
 
-
 .closeModalBtn {
     position: absolute;
     top: 40px;
@@ -26,4 +25,20 @@
     border: none;
     color: white;
     font-family: $font;
+}
+
+/* Mobile */
+@media (max-width: 740px) {
+    .modal {
+        img {
+            width: 327px;
+            object-fit: contain;
+
+        }
+
+        .closeModalBtn {
+            right: 75px;
+            top: 110px;
+        }
+    }
 }
