@@ -10,3 +10,11 @@
         @include hr;
     }
 }
+
+/* Mobile */
+@media (max-width: 768px) {
+    .galleria-header img {
+        padding-left: 36px;
+        padding-top: 15px;
+    }
+}
