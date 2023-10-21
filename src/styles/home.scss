@@ -20,8 +20,8 @@
         margin: 0 40px;
     }
 
-    @media (min-width: 830px) {
-        margin: 0 40px;
+    @media (min-width: 1200px) {
+        // margin: 0 40px;
     }
 
     .column {
@@ -85,8 +85,8 @@
     background: linear-gradient(180deg, rgba(0, 0, 0, 0.00) 0%, rgba(0, 0, 0, 0.84) 100%);
     pointer-events: none;
 
-    @media (max-width: 424px) {
+    @media (max-width: 740) {
         width: 98%;
-        bottom: 18px;
+        bottom: 20;
     }
 }
