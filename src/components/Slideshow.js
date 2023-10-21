@@ -13,19 +13,19 @@ function Slideshow() {
       <div className="gallery-single-wrapper">
         <div className="main-content">
           <button onClick={clickOpenModal} className="modal-open">
-            <img src={"../assets/shared/icon-view-image.svg"} />
+            <img src={"./assets/shared/icon-view-image.svg"} />
             VIEW IMAGE
           </button>
           <div className="images">
             <div className="painting-image">
-              <img src="/assets/shared/logo.svg" alt={painting.name} />
+              <img src="./assets/starry-night/gallery.jpg" />
             </div>
           </div>
           <div className="title-and-artist-box">
             <div className="painting-title">{painting.name}</div>
             <div className="artist-name">{painting.artist.name}</div>
             <div className="artist-image">
-              <img src="/assets/shared/logo.svg" alt={painting.artist.name} />
+              <img src={`.${painting.artist.image}`} />
             </div>
           </div>
         </div>
