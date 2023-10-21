@@ -57,10 +57,7 @@ function Footer() {
             disabled={disableBack}
             className="back-button"
           >
-            <img
-              src="../assets/shared/icon-back-button.svg"
-              alt="back-button"
-            />
+            <img src="/assets/shared/icon-back-button.svg" alt="back-button" />
           </button>
         </Link>
         <Link
@@ -73,10 +70,7 @@ function Footer() {
             disabled={disableNext}
             className="next-button"
           >
-            <img
-              src="../assets/shared/icon-next-button.svg"
-              alt="next button"
-            />
+            <img src="/assets/shared/icon-next-button.svg" alt="next button" />
           </button>
         </Link>
       </div>
