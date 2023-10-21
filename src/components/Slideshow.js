@@ -22,19 +22,25 @@ function Slideshow() {
             }}
             className="modal-open"
           >
-            <img src={"/assets/shared/icon-view-image.svg"} />
+            <img src={"../assets/shared/icon-view-image.svg"} />
             VIEW IMAGE
           </button>
           <div className="images">
             <div className="painting-image">
-              <img src={painting.images.hero.large} alt={painting.name} />
+              <img
+                src={`slideshow/${painting.images.hero.large}`}
+                alt={painting.name}
+              />
             </div>
           </div>
           <div className="title-and-artist-box">
             <div className="painting-title">{painting.name}</div>
             <div className="artist-name">{painting.artist.name}</div>
             <div className="artist-image">
-              <img src={painting.artist.image} alt={painting.artist.name} />
+              <img
+                src={`slideshow/${painting.artist.image}`}
+                alt={painting.artist.name}
+              />
             </div>
           </div>
         </div>
