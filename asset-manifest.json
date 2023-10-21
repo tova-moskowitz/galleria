@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/galleria/static/css/main.d3f5686e.css",
-    "main.js": "/galleria/static/js/main.3b767909.js",
+    "main.js": "/galleria/static/js/main.fc9aabfc.js",
     "static/media/LibreBaskerville-Bold.ttf": "/galleria/static/media/LibreBaskerville-Bold.6e5f70731aeed7c6e895.ttf",
     "index.html": "/galleria/index.html",
     "main.d3f5686e.css.map": "/galleria/static/css/main.d3f5686e.css.map",
-    "main.3b767909.js.map": "/galleria/static/js/main.3b767909.js.map"
+    "main.fc9aabfc.js.map": "/galleria/static/js/main.fc9aabfc.js.map"
   },
   "entrypoints": [
     "static/css/main.d3f5686e.css",
-    "static/js/main.3b767909.js"
+    "static/js/main.fc9aabfc.js"
   ]
 }
