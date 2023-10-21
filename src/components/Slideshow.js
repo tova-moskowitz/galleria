@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import data from "../data/data.json";
 import "../styles/gallery.scss";
+import "../styles/modal.scss";
 import Footer from "./Footer.js";
 import { useParams } from "react-router-dom";
 import Modal from "./Modal.js";
@@ -12,7 +13,7 @@ function Slideshow() {
   const painting = data.find((painting) => painting.id === +paintingId);
 
   return (
-    <>
+    <div className="gallery-wrapper">
       <div className="gallery-single-wrapper">
         {modalOpen && <Modal painting={painting} setModalOpen={setModalOpen} />}
         <div className="main-content">
@@ -48,7 +49,7 @@ function Slideshow() {
         </div>
       </div>
       <Footer />
-    </>
+    </div>
   );
 }
 export default Slideshow;
