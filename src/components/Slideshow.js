@@ -28,7 +28,7 @@ function Slideshow() {
           <div className="images">
             <div className="painting-image">
               <img
-                src={`slideshow/${painting.images.hero.large}`}
+                src={`../${painting.images.hero.large}`}
                 alt={painting.name}
               />
             </div>
@@ -38,7 +38,7 @@ function Slideshow() {
             <div className="artist-name">{painting.artist.name}</div>
             <div className="artist-image">
               <img
-                src={`slideshow/${painting.artist.image}`}
+                src={`../${painting.artist.image}`}
                 alt={painting.artist.name}
               />
             </div>
