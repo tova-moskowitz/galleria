@@ -1,10 +1,9 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import "../styles/header.scss";
 
-function Header() {
-  const [currentLink, setCurrentLink] = useState("/");
-  console.log(window.location.hash);
+function Header({ currentUrl }) {
+  const [currentLink, setCurrentLink] = useState(window.location.hash);
 
   const startSlideshow = (e) => {
     setCurrentLink("/slideshow/0");
@@ -13,6 +12,12 @@ function Header() {
   const stopSlideshow = (e) => {
     setCurrentLink("/");
   };
+
+  useEffect(() => {
+    if (currentUrl === "/") {
+      setCurrentLink("/");
+    }
+  }, []);
 
   return (
     <>

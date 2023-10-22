@@ -22,7 +22,6 @@ function App() {
 
   return (
     <div className="wrapper">
-      <Header />
       <Routes>
         <Route
           path="/"
