@@ -7,11 +7,10 @@ import Header from "./components/Header.js";
 import Slideshow from "./components/Slideshow.js";
 
 // TODO:
-// MOBILE
+// next and back buttons are weird on tablet and mobile
 // close modal on escape (??)
 // Go To Source link jumps around from page to page
 // home- gradient on hover over painting
-// header link to start slideshow and stop slideshow (use react router to show/hide/change the link ?)
 // <Outlet /> (?)
 // use history to go back to home instead of back in slideshow, if have time
 

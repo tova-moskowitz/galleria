@@ -1,6 +1,5 @@
 @import "./_mixins";
 
-// @media (min-width: 1280px) {
 .main-content {
     display: flex;
     flex-direction: row;
@@ -114,8 +113,6 @@
             color: $dark-gray;
         }
     }
-
-    // }
 }
 
 /* Tablet */
@@ -124,10 +121,6 @@
     .wrapper {
         overflow: hidden;
         min-height: 1280px;
-
-        .gallery-wrapper {
-            // padding-left: 30px;
-        }
     }
 
     .main-content {

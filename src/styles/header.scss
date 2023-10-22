@@ -1,13 +1,30 @@
 @import '../styles/mixins';
 
 
-.galleria-header {
-    img {
-        // margin-top: 20px;
-    }
+hr {
+    @include hr;
+}
 
-    hr {
-        @include hr;
+.galleria-header {
+    display: flex;
+
+    .start-slideshow,
+    .stop-slideshow {
+        position: absolute;
+        right: 0;
+        top: 30px;
+        font-size: 12px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+        letter-spacing: 2.571px;
+        text-transform: uppercase;
+        color: #7D7D7D;
+
+        &:hover {
+            color: #000000;
+            cursor: pointer;
+        }
     }
 }
 
